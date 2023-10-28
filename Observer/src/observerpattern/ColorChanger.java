@@ -22,6 +22,11 @@ public class ColorChanger implements ActionListener {
 		frame.getContentPane().setBackground(color);
 		
 	}
+	
+	@Override
+	public String toString() {
+		return "Color: rgb(%s,%s,%s)".formatted(color.getRed(),color.getGreen(),color.getBlue());
+	}
 
 
 }
