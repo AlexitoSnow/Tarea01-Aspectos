@@ -24,7 +24,6 @@ public class Main {
         frame.add(blueButton);
 
         frame.setVisible(true);
-
 	}
 
 }
