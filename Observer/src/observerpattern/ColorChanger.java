@@ -27,6 +27,17 @@ public class ColorChanger implements ActionListener {
 	public String toString() {
 		return "Color: rgb(%s,%s,%s)".formatted(color.getRed(),color.getGreen(),color.getBlue());
 	}
+	
+	public String getColor() {
+		if (color.equals(Color.RED)) {
+	        return "Red";
+	    } else if (color.equals(Color.GREEN)) {
+	        return "Green";
+	    } else {
+	        return "Blue";
+	    }
+		
+	}
 
 
 }

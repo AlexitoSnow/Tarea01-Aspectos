@@ -15,4 +15,13 @@ public aspect ObserverAj {
 	after(ActionListener action) : unsubscribe(action) {
 		System.out.println("Action \"" + action.toString() + "\" unsubscribed.");
 	}
+	
+	pointcut notify(ColorChanger colorChanger) :
+        execution(void ColorChanger.actionPerformed(..)) && target(colorChanger);
+
+    after(ColorChanger colorChanger) : notify(colorChanger) {
+        System.out.println("Background color change --> " + colorChanger.getColor());
+    }
+	
+	  
 }
